@@ -28,7 +28,7 @@ def main():
                   *polibiusz(input('Podaj tekst: \n'), input('Podaj haslo: \n')))
         case 4:
             print('Zaszyfrowana wiadomosc Playfairem to: ',
-                  playfair(input('Podaj tekst: \n'), input('Podaj haslo: \n')))
+                  *playfair(input('Podaj tekst: \n'), input('Podaj haslo: \n')))
         case _:
             print('Nie ma takiego numeru')
 

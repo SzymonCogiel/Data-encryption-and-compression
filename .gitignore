@@ -1,5 +1,6 @@
 ##########################
 # Common files
+experiment.py
 
 # IntelliJ
 .idea/
