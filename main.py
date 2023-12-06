@@ -2,9 +2,15 @@ from encryption.cezar import cezar
 from encryption.vigenere import vigenere
 from encryption.polibiusz import polibiusz
 from encryption.playfair import playfair
+from compression.lzw import LZW
 
 
 def main():
+    print("===============SZYFROWANKO I KOPRESJA DANYCH Z MLYNAREM======================")
+    print("1) Cezar z maslem")
+    print("2) Oliva Vigenere")
+    print("3) Polibisz")
+    print("4) Playfair")
     try:
         choice = int(input('Podaj opcje: \n'))
     except ValueError:
@@ -14,7 +20,6 @@ def main():
         except Exception as e:
             print(str(e))
             return -1
-
     match choice:
         case 1:
             print('Zaszyfrowana wiadomosc Cezarem to: ',
@@ -29,6 +34,9 @@ def main():
         case 4:
             print('Zaszyfrowana wiadomosc Playfairem to: ',
                   *playfair(input('Podaj tekst: \n'), input('Podaj haslo: \n')))
+        case 5:
+            print('Kompresja wiadomosc LZW to: ',
+                  *LZW().compression(input('Podaj tekst: \n')))
         case _:
             print('Nie ma takiego numeru')
 

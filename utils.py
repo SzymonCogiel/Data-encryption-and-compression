@@ -45,3 +45,6 @@ def replace_j(func):
         return func(*args, **kwargs)
 
     return wrapper
+
+
+default_LZW_dict = {'A': 1, 'B': 2, 'C': 3}
